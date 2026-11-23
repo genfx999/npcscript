@@ -1,8 +1,13 @@
-title: NpcScript Documentation
-description: Learn to author NPC conversations, character actions, and cutscenes in Unity.
+title: NpcScript
+description: Create branching NPC conversations, scripted actions, and cinematic cutscenes in Unity using NpcScript's visual editor and extensible C# integration.
 url: https://genfx999.github.io
 baseurl: /npcscript
 markdown: kramdown
 highlighter: rouge
+asset_store_url: ""
+demo_video_url: ""
+support_email: ""
+support_issues_url: ""
 exclude:
   - README.md
+  - DEPLOYMENT.md

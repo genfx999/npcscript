@@ -4,6 +4,7 @@ title: "API reference"
 section: "Reference"
 order: 8
 permalink: /api-reference/
+description: "Saved member and object references use scene hierarchy paths. Rename or reparent referenced objects with care across save versions. Local variables and..."
 ---
 
 | API | Use |

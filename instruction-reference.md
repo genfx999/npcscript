@@ -4,6 +4,7 @@ title: "Instruction reference"
 section: "Reference"
 order: 6
 permalink: /instruction-reference/
+description: "Rows run in order unless a control-flow instruction changes the pointer. A waiting row yields to Unity and retries on later ticks. Exit is optional at..."
 ---
 
 Rows run in order unless a control-flow instruction changes the pointer. A waiting row yields to Unity and retries on later ticks. `Exit` is optional at the physical end of a program.

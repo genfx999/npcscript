@@ -4,6 +4,7 @@ title: "Runtime debugging"
 section: "Support"
 order: 9
 permalink: /runtime-debugging/
+description: "Select a scene runner or program asset and open the Program Editor. Validation reports structural errors, missing function selections, missing argument..."
 ---
 
 Select a scene runner or program asset and open the Program Editor. Validation reports structural errors, missing function selections, missing argument bindings and expression errors. Runtime-only objects are resolved during execution. An asset that validates can still fail if a named object or component is missing in the active scene.

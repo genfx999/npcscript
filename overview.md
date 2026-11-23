@@ -4,6 +4,7 @@ title: "Overview"
 section: "Start here"
 order: 0
 permalink: /overview/
+description: "NpcScript is an instruction-based Unity editor and runtime for dialogue, character actions and cinematic sequences. The release targets Unity 6.3. The..."
 ---
 
 NpcScript is an instruction-based Unity editor and runtime for dialogue, character actions and cinematic sequences. The release targets Unity 6.3. The sample content uses standard Unity modules and package-local materials.

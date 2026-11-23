@@ -4,6 +4,7 @@ title: "Getting started"
 section: "Start here"
 order: 1
 permalink: /getting-started/
+description: "5. In Play Mode, click Speak to guard, or use Run in the Program Editor. The positive branch waits for the gate to reach its target height. The..."
 ---
 
 1. Import the Asset Store download from **Window → Package Manager → My Assets**. For a local export, choose **Assets → Import Package → Custom Package** and select the `.unitypackage`.

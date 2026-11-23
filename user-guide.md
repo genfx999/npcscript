@@ -4,6 +4,7 @@ title: "User guide and examples"
 section: "Start here"
 order: 2
 permalink: /user-guide/
+description: "Programs are ScriptableObjects. Each scene runner points at a program asset. Multiple runners can share a program while keeping separate member and..."
 ---
 
 Programs are ScriptableObjects. Each scene runner points at a program asset. Multiple runners can share a program while keeping separate member and local variables.

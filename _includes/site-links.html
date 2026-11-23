@@ -1,0 +1,9 @@
+<nav class="site-links" aria-label="{{ include.label }}">
+  <a href="{{ '/' | relative_url }}"{% if page.home %} aria-current="page"{% endif %}>Home</a>
+  <a href="{{ '/' | relative_url }}#features">Features</a>
+  <a href="{{ '/' | relative_url }}#examples">Examples</a>
+  <a href="{{ '/getting-started/' | relative_url }}"{% if page.url == '/getting-started/' %} aria-current="page"{% endif %}>Getting Started</a>
+  <a href="{{ '/overview/' | relative_url }}"{% if page.url == '/overview/' %} aria-current="page"{% endif %}>Documentation</a>
+  <a href="{{ '/api-reference/' | relative_url }}"{% if page.url == '/api-reference/' %} aria-current="page"{% endif %}>API Reference</a>
+  <a href="{{ '/support/' | relative_url }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}>Support</a>
+</nav>

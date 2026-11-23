@@ -4,6 +4,7 @@ title: "Localization and recordings"
 section: "Authoring"
 order: 5
 permalink: /localization/
+description: "The authored strings are the English source. Set NpcScripting.Localization.Localization.CurrentLanguageCode from your settings UI, or use the..."
 ---
 
 The authored strings are the English source. Set `NpcScripting.Localization.Localization.CurrentLanguageCode` from your settings UI, or use the **Localization** component's **Language Code**. Runtime text falls back to the authored string when a translation is missing or blank.

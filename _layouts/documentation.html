@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description | escape }}">
-  <title>{{ page.title | escape }} · NpcScript</title>
+  {% assign title = page.seo_title | default: page.title %}
+  {% assign description = page.description | default: site.description %}
+  {% assign image = page.image | default: '/assets/program-editor.png' %}
+  <title>{{ title | escape }}{% unless page.seo_title %} · NpcScript{% endunless %}</title>
+  <meta name="description" content="{{ description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NpcScript">
+  <meta property="og:title" content="{{ title | escape }}">
+  <meta property="og:description" content="{{ description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ image | absolute_url }}">
+  <meta property="og:image:alt" content="The NpcScript Program Editor showing the Beacon Dialogue sample">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#111318">
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
 </head>
 <body>
@@ -12,19 +25,29 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">›_</span>NpcScript</a>
-      <span class="version">v1.0.0 · Unity 6.3</span>
+      <div class="desktop-links">{% include site-links.html label="Main navigation" %}</div>
+      <details class="mobile-links"><summary>Menu</summary>{% include site-links.html label="Main navigation" %}</details>
     </div>
   </header>
-  <div class="site-grid">
-    <aside class="sidebar">{% include navigation.html %}</aside>
-    <details class="mobile-nav"><summary>Documentation menu</summary>{% include navigation.html %}</details>
-    <main class="document{% if page.home %} home{% endif %}" id="main">
-      {% unless page.home %}
-        <p class="breadcrumb"><a href="{{ '/' | relative_url }}">Documentation</a> / {{ page.section | escape }}</p>
+  {% if page.home %}
+    <main id="main">{{ content }}</main>
+  {% else %}
+    <div class="site-grid">
+      <aside class="sidebar">{% include navigation.html %}</aside>
+      <details class="mobile-nav"><summary>Documentation menu</summary>{% include navigation.html %}</details>
+      <main class="document" id="main">
+        <p class="breadcrumb"><a href="{{ '/overview/' | relative_url }}">Documentation</a> / {{ page.section | escape }}</p>
         <h1>{{ page.title | escape }}</h1>
-      {% endunless %}
-      {{ content }}
-    </main>
-  </div>
+        {{ content }}
+      </main>
+    </div>
+  {% endif %}
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">›_</span>NpcScript</a>
+      <p>Unity is a trademark of Unity Technologies.</p>
+      <a href="{{ '/third-party-notices/' | relative_url }}">Third-party notices</a>
+    </div>
+  </footer>
 </body>
 </html>

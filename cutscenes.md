@@ -4,6 +4,7 @@ title: "Cutscenes"
 section: "Authoring"
 order: 4
 permalink: /cutscenes/
+description: "Tag the controlled camera MainCamera. Place a marker at the desired shot position and choose a live transform as the look target. Position moves to a..."
 ---
 
 Tag the controlled camera `MainCamera`. Place a marker at the desired shot position and choose a live transform as the look target. **Position** moves to a marker and waits for the shot to settle. **Camera look at** turns toward a named target and waits for the turn. Both track a moving target once acquired.

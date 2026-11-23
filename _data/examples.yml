@@ -1,0 +1,32 @@
+- title: Interactive Dialogue
+  image: /assets/harbor-dialogue.png
+  alt: The Harbor Guard scene with a permit prompt and two player responses
+  text: Ask a visitor for a permit, then open or keep the harbor gate closed based on their answer.
+  features: [Dialogue choices, Branching, Gate action]
+  url: /dialogue/
+- title: Actions and Sequencing
+  image: /assets/signal-station.png
+  alt: A technician next to a raised signal beacon in the Signal Station sample
+  text: Walk a technician to a station, play an animation and a sound, then reveal and raise a beacon.
+  features: [Navigation, Animation, Audio, Props]
+  url: /instruction-reference/
+- title: Cutscene Direction
+  image: /assets/overlook-cutscene.png
+  alt: The Arrival at the Overlook sample during a scripted camera shot
+  text: Follow a scout to an overlook with a scripted camera move, dialogue, and a return to the player camera.
+  features: [Tracking, Dolly, Zoom, Camera release]
+  url: /cutscenes/
+- title: Custom C# Integration
+  text: Use a custom permit getter and a command that waits for the gate to finish opening.
+  features: [Attributed methods, Conditions, Waiting]
+  url: /custom-commands/
+- title: Advanced Scripting
+  image: /assets/calibration.png
+  alt: The Calibration sample with three raised signal indicators
+  text: Calibrate three stations in a loop while a reusable child program updates the caller's counter.
+  features: [Loops, Expressions, In/out parameters]
+  url: /user-guide/
+- title: Beacon Demo
+  text: Choose whether to raise the beacon. Both branches invoke a shared reply program.
+  features: [Prompt, Prop tween, Program call]
+  url: /user-guide/

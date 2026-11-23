@@ -4,6 +4,7 @@ title: "Custom C# commands"
 section: "Reference"
 order: 7
 permalink: /custom-commands/
+description: "Create a component subclass of NpcScript, attach it in place of the base runner, and select it in the Program Editor. Public instance methods marked..."
 ---
 
 Create a component subclass of `NpcScript`, attach it in place of the base runner, and select it in the Program Editor. Public instance methods marked `NpcScriptFunction` appear when their signatures are supported. Use unique method names. The display label is independent of the serialized method name, so rename labels freely and migrate saved calls before renaming methods.

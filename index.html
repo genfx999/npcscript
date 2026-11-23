@@ -1,22 +1,100 @@
 ---
 layout: documentation
-title: Documentation
+title: NpcScript
+seo_title: NpcScript — Visual NPC Scripting & Cutscene Toolkit for Unity
 home: true
 ---
-<section class="intro">
-  <div class="intro-copy">
-    <h1>NpcScript documentation</h1>
-    <p>Author NPC conversations, scripted character actions, and cutscenes in Unity with reusable visual programs.</p>
-    <a class="primary-link" href="{{ '/getting-started/' | relative_url }}">Start the five-minute guide <span aria-hidden="true">→</span></a>
+<section class="hero" aria-labelledby="product-title">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <h1 id="product-title">NpcScript</h1>
+      <p class="hero-tagline">Bring Your NPCs to Life</p>
+      <p class="hero-description">Create interactive conversations, scripted character behavior, and cinematic cutscenes with one powerful visual scripting toolkit for Unity.</p>
+      <div class="cta-row">
+        <a class="button primary-button" href="{{ '/overview/' | relative_url }}">View Documentation <span aria-hidden="true">→</span></a>
+        {% if site.demo_video_url and site.demo_video_url != '' %}
+          <a class="button secondary-button" href="{{ site.demo_video_url | escape }}">Watch Demo</a>
+        {% endif %}
+        <a class="button secondary-button" href="#examples">See Examples</a>
+      </div>
+      {% if site.asset_store_url and site.asset_store_url != '' %}
+        <a class="store-status" href="{{ site.asset_store_url | escape }}">Get NpcScript on the Unity Asset Store <span aria-hidden="true">↗</span></a>
+      {% else %}
+        <p class="store-status"><span class="status-dot" aria-hidden="true"></span>Unity Asset Store · Coming Soon</p>
+      {% endif %}
+    </div>
+    <figure class="editor-shot hero-shot">
+      <img src="{{ '/assets/program-editor.png' | relative_url }}" width="1400" height="900" fetchpriority="high" alt="NpcScript Program Editor in Unity showing a dialogue prompt, an If condition, and calls in both branches">
+      <figcaption>NpcScript Program Editor · Beacon Dialogue in Unity</figcaption>
+    </figure>
   </div>
-  <figure>
-    <img src="{{ '/assets/harbor-dialogue.png' | relative_url }}" alt="The Harbor Guard demo in Unity with a permit prompt and two choices" width="820" height="606">
-    <figcaption>Interactive Dialogue sample in Unity</figcaption>
-  </figure>
 </section>
-<div class="quick-links">
-  <a href="{{ '/user-guide/' | relative_url }}"><strong>Explore the samples</strong><span>See the included dialogue, sequencing, cutscene, and advanced scripting scenes.</span></a>
-  <a href="{{ '/instruction-reference/' | relative_url }}"><strong>Look up an instruction</strong><span>Find row behavior, parameters, built-in commands, and wait semantics.</span></a>
-  <a href="{{ '/custom-commands/' | relative_url }}"><strong>Extend with C#</strong><span>Expose typed commands, conditions, and frame-driven actions.</span></a>
-  <a href="{{ '/runtime-debugging/' | relative_url }}"><strong>Debug a program</strong><span>Validate a program, step through it, and follow the active instruction.</span></a>
-</div>
+
+<section class="section shell" id="features" aria-labelledby="features-title">
+  <h2 id="features-title">What you can build</h2>
+  <div class="feature-grid">
+    {% for feature in site.data.features %}
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">{{ feature.icon | escape }}</span>
+        <h3>{{ feature.title | escape }}</h3>
+        <p>{{ feature.text | escape }}</p>
+        <a href="{{ feature.url | relative_url }}">{{ feature.link | escape }} <span aria-hidden="true">→</span></a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-panel" aria-labelledby="editor-title">
+  <div class="shell">
+    <h2 id="editor-title">Powerful Scripting. No Sprawling Node Graphs.</h2>
+    <p class="section-intro">Write an NPC program as a structured list of instructions. Edit a condition or dialogue choice in place, fold its nested block, and see which row is active in Play Mode.</p>
+    <figure class="editor-shot showcase-shot">
+      <a href="{{ '/assets/program-editor.png' | relative_url }}" aria-label="View the full-size Program Editor screenshot">
+        <img src="{{ '/assets/program-editor.png' | relative_url }}" width="1400" height="900" loading="lazy" alt="The Beacon Dialogue program with a validation message, two prompt responses, nested If and Else instructions, and foldout controls">
+      </a>
+      <figcaption>Beacon Dialogue shows validation, prompt choices, and nested If and Else rows. Select the image to view it at full size.</figcaption>
+    </figure>
+    <a class="section-link" href="{{ '/user-guide/' | relative_url }}">Read the editor guide <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="section shell" id="examples" aria-labelledby="examples-title">
+  <h2 id="examples-title">See NpcScript in Action</h2>
+  <p class="section-intro">Six included Unity scenes show how the instructions work together.</p>
+  <div class="gallery">
+    {% for example in site.data.examples %}
+      <article class="demo-card">
+        {% if example.image %}
+          <img class="demo-media" src="{{ example.image | relative_url }}" width="820" height="606" loading="lazy" alt="{{ example.alt | escape }}">
+        {% else %}
+          <div class="demo-media demo-pending"><span>Screenshot pending</span></div>
+        {% endif %}
+        <div class="demo-content">
+          <h3>{{ example.title | escape }}</h3>
+          <p>{{ example.text | escape }}</p>
+          <ul class="tags" aria-label="Features demonstrated">
+            {% for feature in example.features %}<li>{{ feature | escape }}</li>{% endfor %}
+          </ul>
+          <div class="demo-links">
+            <a href="{{ example.url | relative_url }}">{{ example.title | escape }} documentation <span aria-hidden="true">→</span></a>
+            {% if example.video_url and example.video_url != '' %}
+              <a href="{{ example.video_url | escape }}">Watch {{ example.title | escape }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-panel" id="getting-started" aria-labelledby="start-title">
+  <div class="shell">
+    <h2 id="start-title">Your First NPC Interaction in Five Minutes</h2>
+    <ol class="steps">
+      <li><strong>Create a program</strong><p>Import NpcScript, open the Program Editor, and create a program asset.</p></li>
+      <li><strong>Add instructions</strong><p>Write a prompt, branch on its response, and choose a gameplay action.</p></li>
+      <li><strong>Assign and run</strong><p>Assign the program to an NpcScript component and run it in Unity Play Mode.</p></li>
+    </ol>
+    <a class="button primary-button" href="{{ '/getting-started/' | relative_url }}">Open the Getting Started guide <span aria-hidden="true">→</span></a>
+  </div>
+</section>

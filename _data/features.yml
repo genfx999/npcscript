@@ -1,0 +1,30 @@
+- icon: "≡"
+  title: Visual Scripting
+  text: Build reusable programs with branching, loops, expressions, local and shared variables, and calls to other programs. Fold blocks to keep longer scripts readable.
+  url: /user-guide/
+  link: Explore the program editor
+- icon: "⋯"
+  title: Interactive Dialogue
+  text: Offer choices, branch on responses, and insert runtime values into dialogue text. Use the included dialogue panel, JSON localization, and optional voice recordings you supply.
+  url: /dialogue/
+  link: Read the dialogue guide
+- icon: "↗"
+  title: Character Actions
+  text: Coordinate NavMesh movement, animation, audio, visibility, and transform changes. Set object parenting or placement and wait for actions to finish.
+  url: /instruction-reference/
+  link: Browse the built-in commands
+- icon: "⊡"
+  title: Cutscene Cameras
+  text: Position a camera, track a moving target, and dolly or zoom through a scripted sequence. Release the camera to hand control back.
+  url: /cutscenes/
+  link: Learn camera direction
+- icon: "{ }"
+  title: C# Extensibility
+  text: Expose your own quest operations, inventory checks, interactions, and gameplay methods as commands, conditions, or value getters.
+  url: /custom-commands/
+  link: Write a custom command
+- icon: "▷"
+  title: Runtime Debugging
+  text: Validate programs before running them. Run, stop, restart, and step through a script with live instruction highlighting.
+  url: /runtime-debugging/
+  link: Learn to debug a program

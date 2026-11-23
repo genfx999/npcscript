@@ -4,6 +4,7 @@ title: "Dialogue"
 section: "Authoring"
 order: 3
 permalink: /dialogue/
+description: "Say displays a line for the runner. Say for targets another object with a runner. Say random chooses a non-empty option. Hide speech dismisses the line..."
 ---
 
 **Say** displays a line for the runner. **Say for** targets another object with a runner. **Say random** chooses a non-empty option. **Hide speech** dismisses the line and stops its recorded speech. **Wait for speech** waits for the recording, or for the fallback duration in milliseconds.

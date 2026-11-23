@@ -4,6 +4,7 @@ title: "Third-party notices"
 section: "Support"
 order: 12
 permalink: /third-party-notices/
+description: "NpcScript ships no third-party source libraries, purchased Asset Store assets, fonts, models or recorded voices. The sample scenes use Unity's built-in..."
 ---
 
 NpcScript ships no third-party source libraries, purchased Asset Store assets, fonts, models or recorded voices. The sample scenes use Unity's built-in primitive meshes and runtime modules. Sample material colors, the simple sample shader, the original synthesized signal cue and sample animation are provided with NpcScript.
