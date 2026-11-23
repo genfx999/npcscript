@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #182334;
+  --muted: #536174;
+  --line: #d9e0e7;
+  --link: #164e78;
+  --paper: #f8fafc;
+  --navy: #101e30;
+  --gold: #f5bc62;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 "DM Sans", system-ui, sans-serif; }
+a { color: var(--link); text-underline-offset: .2em; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #bc6500; outline-offset: 4px; }
+.skip-link { position: absolute; left: 1rem; top: -10rem; background: white; color: var(--ink); padding: .5rem 1rem; z-index: 2; }
+.skip-link:focus { top: .6rem; }
+.site-header { background: var(--navy); color: #fff; }
+.header-inner { max-width: 1440px; padding: .85rem 2rem; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; }
+.brand-mark { font: 500 .95rem "Geist Mono", monospace; color: var(--navy); background: var(--gold); padding: .3rem .43rem; border-radius: 6px; }
+.version { color: #cbd7e6; font-size: .82rem; }
+.site-grid { max-width: 1440px; margin: auto; display: grid; grid-template-columns: 246px minmax(0, 1fr); min-height: calc(100vh - 62px); }
+.sidebar { padding: 1.5rem 1.35rem; border-right: 1px solid var(--line); }
+nav ul { list-style: none; margin: 0 0 1.15rem; padding: 0; }
+.nav-title { color: var(--muted); font-size: .73rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin: .35rem .65rem; }
+nav a { display: block; color: var(--ink); padding: .28rem .65rem; border-radius: 5px; font-size: .92rem; text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { background: #e5edf5; color: #143f62; }
+nav a[aria-current="page"] { font-weight: 700; }
+.mobile-nav { display: none; }
+.document { width: 100%; min-width: 0; max-width: 1050px; padding: clamp(1.2rem, 3.9vw, 3.5rem); }
+.breadcrumb { margin: 0 0 1rem; color: var(--muted); font-size: .87rem; }
+h1, h2, h3 { line-height: 1.14; text-wrap: balance; }
+h1 { margin: 0 0 1.25rem; font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.045em; }
+h2 { margin: 2.4rem 0 .65rem; }
+code { font: .87em/1.65 "Geist Mono", monospace; background: #e9eef4; border-radius: 4px; padding: .05em .27em; overflow-wrap: anywhere; }
+pre { background: var(--navy); color: #e8f1ff; overflow: auto; padding: 1.1rem 1.25rem; border-radius: 8px; }
+pre code { background: transparent; color: inherit; padding: 0; overflow-wrap: normal; }
+table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1.3rem 0; font-size: .92rem; }
+th, td { border: 1px solid var(--line); text-align: left; padding: .6rem .8rem; vertical-align: top; }
+th { background: #e9eef4; }
+td { background: #fff; }
+.intro { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 1.7rem; padding: clamp(1.25rem, 3.7vw, 2.6rem); background: var(--navy); color: #fff; border-radius: 12px; }
+.intro h1 { font-size: clamp(2rem, 4.1vw, 3.4rem); }
+.intro p { color: #d1dded; margin: 0 0 1.5rem; }
+.intro figure { margin: 0; }
+.intro img { width: 100%; height: auto; display: block; border-radius: 7px; border: 1px solid #536781; }
+.intro figcaption { color: #cbd7e6; margin-top: .42rem; font-size: .77rem; }
+.primary-link { display: inline-block; color: var(--navy); background: var(--gold); padding: .58rem .85rem; font-weight: 700; border-radius: 6px; text-decoration: none; }
+.primary-link:hover { background: #ffcd7e; }
+.quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: 1rem; }
+.quick-links a { display: block; padding: 1rem; border: 1px solid var(--line); border-radius: 8px; background: white; text-decoration: none; }
+.quick-links a:hover { border-color: var(--link); }
+.quick-links strong, .quick-links span { display: block; }
+.quick-links span { color: var(--muted); margin-top: .25rem; font-size: .91rem; }
+@media (max-width: 900px) { .intro { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .site-grid { display: block; }
+  .header-inner { padding: .8rem 1rem; }
+  .sidebar { display: none; }
+  .mobile-nav { display: block; padding: .55rem 1.2rem; border-bottom: 1px solid var(--line); }
+  .mobile-nav summary { cursor: pointer; font-weight: 600; }
+  .mobile-nav nav { padding-top: .65rem; }
+}
+@media (max-width: 440px) { .quick-links { grid-template-columns: 1fr; } }

@@ -1,0 +1,8 @@
+title: NpcScript Documentation
+description: Learn to author NPC conversations, character actions, and cutscenes in Unity.
+url: https://genfx999.github.io
+baseurl: /npcscript
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - README.md

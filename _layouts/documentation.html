@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ page.title | escape }} · NpcScript</title>
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">›_</span>NpcScript</a>
+      <span class="version">v1.0.0 · Unity 6.3</span>
+    </div>
+  </header>
+  <div class="site-grid">
+    <aside class="sidebar">{% include navigation.html %}</aside>
+    <details class="mobile-nav"><summary>Documentation menu</summary>{% include navigation.html %}</details>
+    <main class="document{% if page.home %} home{% endif %}" id="main">
+      {% unless page.home %}
+        <p class="breadcrumb"><a href="{{ '/' | relative_url }}">Documentation</a> / {{ page.section | escape }}</p>
+        <h1>{{ page.title | escape }}</h1>
+      {% endunless %}
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
