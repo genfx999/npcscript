@@ -64,20 +64,6 @@ home: true
   <div class="gallery">
     {% for example in site.data.examples %}
       <article class="demo-card">
-        <div class="demo-pair">
-          <figure>
-            <a href="{{ example.play_image | relative_url }}" aria-label="View the full-size Play Mode screenshot for {{ example.title | escape }}">
-              <img src="{{ example.play_image | relative_url }}" width="1280" height="720" loading="lazy" alt="{{ example.play_alt | escape }}">
-            </a>
-            <figcaption>Play Mode</figcaption>
-          </figure>
-          <figure>
-            <a href="{{ example.program_image | relative_url }}" aria-label="View the full-size {{ example.program | escape }} program screenshot">
-              <img src="{{ example.program_image | relative_url }}" width="1400" height="900" loading="lazy" alt="NpcScript Program Editor showing the {{ example.program | escape }} program in Play Mode">
-            </a>
-            <figcaption>NpcScript · {{ example.program | escape }}</figcaption>
-          </figure>
-        </div>
         <div class="demo-content">
           <h3>{{ example.title | escape }}</h3>
           <p>{{ example.text | escape }}</p>
@@ -90,6 +76,20 @@ home: true
               <a href="{{ example.video_url | escape }}">Watch {{ example.title | escape }}</a>
             {% endif %}
           </div>
+        </div>
+        <div class="demo-pair">
+          <figure>
+            <a href="{{ example.play_image | relative_url }}?v={{ site.github.build_revision }}" aria-label="View the full-size Play Mode screenshot for {{ example.title | escape }}">
+              <img src="{{ example.play_image | relative_url }}?v={{ site.github.build_revision }}" width="647" height="364" loading="lazy" alt="{{ example.play_alt | escape }}">
+            </a>
+            <figcaption>Play Mode</figcaption>
+          </figure>
+          <figure>
+            <a href="{{ example.program_image | relative_url }}?v={{ site.github.build_revision }}" aria-label="View the full-size {{ example.program | escape }} program screenshot">
+              <img src="{{ example.program_image | relative_url }}?v={{ site.github.build_revision }}" width="1400" height="900" loading="lazy" alt="NpcScript Program Editor showing the {{ example.program | escape }} program in Play Mode">
+            </a>
+            <figcaption>NpcScript · {{ example.program | escape }}</figcaption>
+          </figure>
         </div>
       </article>
     {% endfor %}
