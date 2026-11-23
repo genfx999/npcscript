@@ -60,15 +60,24 @@ home: true
 
 <section class="section shell" id="examples" aria-labelledby="examples-title">
   <h2 id="examples-title">See NpcScript in Action</h2>
-  <p class="section-intro">Six included Unity scenes show how the instructions work together.</p>
+  <p class="section-intro">Compare each scene in Play Mode with the NpcScript program that drives it. Select any screenshot to see it at full size.</p>
   <div class="gallery">
     {% for example in site.data.examples %}
       <article class="demo-card">
-        {% if example.image %}
-          <img class="demo-media" src="{{ example.image | relative_url }}" width="820" height="606" loading="lazy" alt="{{ example.alt | escape }}">
-        {% else %}
-          <div class="demo-media demo-pending"><span>Screenshot pending</span></div>
-        {% endif %}
+        <div class="demo-pair">
+          <figure>
+            <a href="{{ example.play_image | relative_url }}" aria-label="View the full-size Play Mode screenshot for {{ example.title | escape }}">
+              <img src="{{ example.play_image | relative_url }}" width="1280" height="720" loading="lazy" alt="{{ example.play_alt | escape }}">
+            </a>
+            <figcaption>Play Mode</figcaption>
+          </figure>
+          <figure>
+            <a href="{{ example.program_image | relative_url }}" aria-label="View the full-size {{ example.program | escape }} program screenshot">
+              <img src="{{ example.program_image | relative_url }}" width="1400" height="900" loading="lazy" alt="NpcScript Program Editor showing the {{ example.program | escape }} program in Play Mode">
+            </a>
+            <figcaption>NpcScript · {{ example.program | escape }}</figcaption>
+          </figure>
+        </div>
         <div class="demo-content">
           <h3>{{ example.title | escape }}</h3>
           <p>{{ example.text | escape }}</p>

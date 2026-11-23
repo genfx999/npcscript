@@ -1,32 +1,48 @@
 - title: Interactive Dialogue
-  image: /assets/harbor-dialogue.png
-  alt: The Harbor Guard scene with a permit prompt and two player responses
+  play_image: /assets/examples/interactive-dialogue-play.png
+  play_alt: Unity Game view showing the harbor guard asking the player for a permit
+  program_image: /assets/examples/interactive-dialogue-program.png
+  program: Harbor Conversation
   text: Ask a visitor for a permit, then open or keep the harbor gate closed based on their answer.
   features: [Dialogue choices, Branching, Gate action]
   url: /dialogue/
 - title: Actions and Sequencing
-  image: /assets/signal-station.png
-  alt: A technician next to a raised signal beacon in the Signal Station sample
+  play_image: /assets/examples/actions-sequencing-play.png
+  play_alt: Unity Game view showing the technician with the raised station beacon
+  program_image: /assets/examples/actions-sequencing-program.png
+  program: Signal Station Sequence
   text: Walk a technician to a station, play an animation and a sound, then reveal and raise a beacon.
   features: [Navigation, Animation, Audio, Props]
   url: /instruction-reference/
 - title: Cutscene Direction
-  image: /assets/overlook-cutscene.png
-  alt: The Arrival at the Overlook sample during a scripted camera shot
+  play_image: /assets/examples/cutscene-direction-play.png
+  play_alt: Unity Game view showing the scout during the overlook camera shot
+  program_image: /assets/examples/cutscene-direction-program.png
+  program: Overlook Cutscene
   text: Follow a scout to an overlook with a scripted camera move, dialogue, and a return to the player camera.
   features: [Tracking, Dolly, Zoom, Camera release]
   url: /cutscenes/
 - title: Custom C# Integration
+  play_image: /assets/examples/custom-csharp-play.png
+  play_alt: Unity Game view showing the raised gate and the confirmation from the custom command
+  program_image: /assets/examples/custom-csharp-program.png
+  program: Custom Gate Commands
   text: Use a custom permit getter and a command that waits for the gate to finish opening.
   features: [Attributed methods, Conditions, Waiting]
   url: /custom-commands/
 - title: Advanced Scripting
-  image: /assets/calibration.png
-  alt: The Calibration sample with three raised signal indicators
+  play_image: /assets/examples/advanced-scripting-play.png
+  play_alt: Unity Game view showing three raised calibration indicators
+  program_image: /assets/examples/advanced-scripting-program.png
+  program: Calibration Loop
   text: Calibrate three stations in a loop while a reusable child program updates the caller's counter.
   features: [Loops, Expressions, In/out parameters]
   url: /user-guide/
 - title: Beacon Demo
+  play_image: /assets/examples/beacon-demo-play.png
+  play_alt: Unity Game view showing the Beacon Keeper's two dialogue choices
+  program_image: /assets/examples/beacon-demo-program.png
+  program: Beacon Dialogue
   text: Choose whether to raise the beacon. Both branches invoke a shared reply program.
   features: [Prompt, Prop tween, Program call]
   url: /user-guide/

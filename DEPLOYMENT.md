@@ -20,4 +20,4 @@ The browser checks used Edge with emulated viewport sizes. Separate physical-dev
 
 The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. Add a `video_url` to an example in `_data/examples.yml` if a genuine clip is published.
 
-The hero and showcase use a genuine Unity Program Editor capture. Four gallery cards have genuine Game view captures. Custom C# Integration and Beacon Demo show a neutral pending state. To complete the gallery, capture the gate raised in the Custom C# Integration sample and a visible Beacon prompt or raised beacon in Beacon Demo. Keep the capture scoped to Unity's Game view.
+The hero and showcase use a genuine Unity Program Editor capture. Each of the six example cards pairs a Game view captured in Play Mode with the Program Editor showing the corresponding sample program. Both images link to their full-size captures.
