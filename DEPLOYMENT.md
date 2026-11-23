@@ -18,6 +18,6 @@ The browser checks used Edge with emulated viewport sizes. Separate physical-dev
 
 ## Publisher settings
 
-The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. Add a `video_url` to an example in `_data/examples.yml` if a genuine clip is published.
+The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. Set `youtube_id` in `_data/examples.yml` to embed a YouTube video in an example, or use `video_url` for a video link alongside the screenshots.
 
-The hero and showcase use a genuine Unity Program Editor capture. Each of the six example cards pairs a Game view captured in Play Mode with the Program Editor showing the corresponding sample program. Both images link to their full-size captures.
+The hero and showcase use a genuine Unity Program Editor capture. Interactive Dialogue embeds the 1440p YouTube demo. The other five examples pair a Play Mode Game view with the corresponding program and link to the full-size captures.

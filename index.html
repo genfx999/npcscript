@@ -60,7 +60,7 @@ home: true
 
 <section class="section shell" id="examples" aria-labelledby="examples-title">
   <h2 id="examples-title">See NpcScript in Action</h2>
-  <p class="section-intro">Compare each scene in Play Mode with the NpcScript program that drives it. Select any screenshot to see it at full size.</p>
+  <p class="section-intro">Watch the Interactive Dialogue demo or explore Play Mode and NpcScript editor screenshots from the other samples.</p>
   <div class="gallery">
     {% for example in site.data.examples %}
       <article class="demo-card">
@@ -72,11 +72,18 @@ home: true
           </ul>
           <div class="demo-links">
             <a href="{{ example.url | relative_url }}">{{ example.title | escape }} documentation <span aria-hidden="true">→</span></a>
-            {% if example.video_url and example.video_url != '' %}
+            {% if example.youtube_id %}
+              <a href="https://www.youtube.com/watch?v={{ example.youtube_id | escape }}">Watch on YouTube</a>
+            {% elsif example.video_url and example.video_url != '' %}
               <a href="{{ example.video_url | escape }}">Watch {{ example.title | escape }}</a>
             {% endif %}
           </div>
         </div>
+        {% if example.youtube_id %}
+        <div class="demo-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ example.youtube_id | escape }}" title="{{ example.title | escape }} demo video" width="960" height="540" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </div>
+        {% else %}
         <div class="demo-pair">
           <figure>
             <a href="{{ example.play_image | relative_url }}?v={{ site.github.build_revision }}" aria-label="View the full-size Play Mode screenshot for {{ example.title | escape }}">
@@ -91,6 +98,7 @@ home: true
             <figcaption>NpcScript · {{ example.program | escape }}</figcaption>
           </figure>
         </div>
+        {% endif %}
       </article>
     {% endfor %}
   </div>

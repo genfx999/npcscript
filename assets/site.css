@@ -79,6 +79,8 @@ a.store-status { color: var(--accent); }
 .showcase-shot { max-width: 1080px; }
 .section-link { display: inline-block; margin-top: 1rem; }
 .demo-card { overflow: hidden; }
+.demo-video { padding: 1rem; background: #151920; border-top: 1px solid var(--line); }
+.demo-video iframe { display: block; width: 100%; max-width: 960px; height: auto; min-height: 200px; aspect-ratio: 16 / 9; margin-inline: auto; border: 1px solid var(--line); border-radius: .35rem; background: #000; }
 .demo-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: .9rem; padding: 1rem; background: #151920; border-top: 1px solid var(--line); }
 .demo-pair figure { margin: 0; min-width: 0; }
 .demo-pair figure a { display: block; background: #111821; border: 1px solid var(--line); border-radius: .35rem; overflow: hidden; }

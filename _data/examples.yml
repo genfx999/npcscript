@@ -1,8 +1,5 @@
 - title: Interactive Dialogue
-  play_image: /assets/examples/interactive-dialogue-play.png
-  play_alt: Unity Game view showing the harbor guard asking the player for a permit
-  program_image: /assets/examples/interactive-dialogue-program.png
-  program: Harbor Conversation
+  youtube_id: "92F9KswOZII"
   text: Ask a visitor for a permit, then open or keep the harbor gate closed based on their answer.
   features: [Dialogue choices, Branching, Gate action]
   url: /dialogue/
