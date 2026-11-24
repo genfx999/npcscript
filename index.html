@@ -12,6 +12,7 @@ home: true
       <p class="hero-description">Create interactive conversations, scripted character behavior, and cinematic cutscenes with one powerful visual scripting toolkit for Unity.</p>
       <div class="cta-row">
         <a class="button primary-button" href="{{ '/overview/' | relative_url }}">View Documentation <span aria-hidden="true">→</span></a>
+        <a class="button secondary-button" href="#first-program">Watch Tutorial</a>
         {% if site.demo_video_url and site.demo_video_url != '' %}
           <a class="button secondary-button" href="{{ site.demo_video_url | escape }}">Watch Demo</a>
         {% endif %}
@@ -23,10 +24,21 @@ home: true
         <p class="store-status"><span class="status-dot" aria-hidden="true"></span>Unity Asset Store · Coming Soon</p>
       {% endif %}
     </div>
-    <figure class="editor-shot hero-shot">
-      <img src="{{ '/assets/program-editor.png' | relative_url }}" width="1400" height="900" fetchpriority="high" alt="NpcScript Program Editor in Unity showing a dialogue prompt, an If condition, and calls in both branches">
-      <figcaption>NpcScript Program Editor · Beacon Dialogue in Unity</figcaption>
-    </figure>
+    <div class="editor-shot hero-shot">
+      <img src="{{ '/assets/npcscript-hero.png' | relative_url }}" width="1536" height="1024" fetchpriority="high" alt="NpcScript visual scripting toolkit for Unity, featuring branching dialogue, cinematic actions and cutscenes, conditions, variables, loops, and custom C# commands beside a preview of the Program Editor">
+    </div>
+  </div>
+</section>
+
+<section class="section section-panel tutorial" id="first-program" aria-labelledby="first-program-title">
+  <div class="shell">
+    <h2 id="first-program-title">Build your first NpcScript program</h2>
+    <p class="section-intro">Follow along in Unity. Create a program, add branching dialogue, and test both choices in Play Mode. The captioned walkthrough runs 1 minute 39 seconds.</p>
+    <video class="tutorial-video" width="2560" height="1440" controls playsinline preload="none" aria-labelledby="first-program-title" poster="{{ '/assets/first-program-poster.jpg' | relative_url }}">
+      <source src="{{ '/assets/first-npcscript-program.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/first-npcscript-program.mp4' | relative_url }}">Download the tutorial video</a>
+    </video>
+    <a class="section-link" href="{{ '/getting-started/' | relative_url }}">Read the getting started guide <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
