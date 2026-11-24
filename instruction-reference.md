@@ -35,18 +35,4 @@ Rows run in order unless a control-flow instruction changes the pointer. A waiti
 
 ## Built-in functions
 
-Parameter units follow the labels in the editor. Commands named **Sleep**, **Wait for speech**, **Move to**, **PlayAnimation**, **Play animation loop**, **Play sound loop**, **Camera look at**, **Release camera**, **Reset** and **Position** are waiting-capable. **Dolly**, **Zoom** and **Tween** commands start motion without waiting. Play a sample to see those commands combined with a wait.
-
-| Group | Functions and inputs |
-| --- | --- |
-| Diagnostics | **Log**, **LogWarning** take a message and include call context. |
-| Dialogue | **Say** takes text. **Say for** takes a speaker transform and text. **Say random** takes text choices. **Hide speech** takes no arguments. **Wait for speech** takes fallback milliseconds and an optional speaker. **Response** returns the choice number. |
-| State | **NPC name** and **NPC is active** read the runner's GameObject and active state. |
-| Targeting | **Select nearest target** takes a range. **Select target by name** and **Select target by tag** update the target. **Select target in collider** takes a collider transform. **Target Transform** reads the selected transform. **Distance to player** and **Player is focusing on NPC** use the built-in scene tags. |
-| Search | **Find nearest** accepts an origin, distance and component type name. Use a fully qualified name if two component types share a name. |
-| Timing and math | **Sleep** takes milliseconds. **Sleep while player is focusing** also takes range. **Random** takes lower and upper bounds, and **Min** and **Max** take two values. |
-| Navigation | **Move to** takes a scene object name. **Move to Transform** takes its transform. Both need a reachable target and an enabled NavMeshAgent. |
-| Animation | **Set animator trigger** takes a parameter name, **Set animator enabled** takes a boolean, **PlayAnimation** takes a clip, and **Play animation loop** takes a clip and milliseconds. |
-| Audio | **PlaySound** takes a clip. **Play sound at volume** also takes volume. **Play sound loop** takes a clip, milliseconds and a wait flag. |
-| Props | **Set parent** takes parent and child transforms. **Set visible** takes a transform and boolean. **Tween position** and **Tween position by name** take a target, offsets and milliseconds. **Tween transform** moves the runner to the target pose. **Tween to Y** sets local Y. **Tween rotate X/Y/Z** apply local-axis rotation over time. |
-| Cameras | **Camera look at** takes a named target and duration. **Position** takes position and look transforms, plus duration. **Dolly** takes a world offset, speed and target. **Zoom** takes a target, range and duration. **Release camera** and **Reset** release ownership over the chosen duration. |
+The [Function reference]({{ '/function-reference/' | relative_url }}) lists each built-in function, its parameters and defaults, and when it waits.

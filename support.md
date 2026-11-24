@@ -30,7 +30,7 @@ Yes. Turn off the included dialogue panel, read the runner's prompt state, and s
 ## Contact
 
 {% if site.support_email and site.support_email != '' %}
-Email [{{ site.support_email | escape }}](mailto:{{ site.support_email | escape }}).
+Email the publisher at [{{ site.support_email | escape }}](mailto:{{ site.support_email | escape }}).
 {% else %}
 **Publisher support email:** To be provided.
 {% endif %}

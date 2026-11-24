@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: rouge
 asset_store_url: ""
 demo_video_url: ""
-support_email: ""
+support_email: "genfx999@gmail.com"
 support_issues_url: ""
 exclude:
   - README.md
