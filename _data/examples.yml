@@ -19,10 +19,7 @@
   features: [Attributed methods, Conditions, Waiting]
   url: /custom-commands/
 - title: Advanced Scripting
-  play_image: /assets/examples/advanced-scripting-play.png
-  play_alt: Unity Game view showing three raised calibration indicators
-  program_image: /assets/examples/advanced-scripting-program.png
-  program: Calibration Loop
+  youtube_id: "BemrL3NJApw"
   text: Calibrate three stations in a loop while a reusable child program updates the caller's counter.
   features: [Loops, Expressions, In/out parameters]
   url: /user-guide/
