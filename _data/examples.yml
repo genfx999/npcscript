@@ -24,10 +24,7 @@
   features: [Loops, Expressions, In/out parameters]
   url: /user-guide/
 - title: Beacon Demo
-  play_image: /assets/examples/beacon-demo-play.png
-  play_alt: Unity Game view showing the Beacon Keeper's two dialogue choices
-  program_image: /assets/examples/beacon-demo-program.png
-  program: Beacon Dialogue
+  youtube_id: "stbwSlNlTzE"
   text: Choose whether to raise the beacon. Both branches invoke a shared reply program.
   features: [Prompt, Prop tween, Program call]
   url: /user-guide/
