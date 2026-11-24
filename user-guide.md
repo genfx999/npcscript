@@ -25,3 +25,54 @@ Locals belong to an invocation. Members belong to a runner. Globals are shared w
 | Beacon Demo | A shorter dialogue and a shared reply program. |
 
 Transform fields accept a scene object name, `this`, `TargetTransform`, a scoped variable, or `null` where the command allows that value. Use unique scene object names for name-based references. When a name is computed, use a Set expression such as `GameObject.Find("Indicator " + Local.Step)` to store the object in a local and pass that local to a transform field.
+
+## Save and load NpcScript state
+
+Use `NpcScriptVariablePersistence` to include NpcScript in your game's save file. `CaptureGlobals()` collects shared variables such as `Global.QuestStage`. `CaptureMembers()` collects per-runner variables such as `Member.HasGreeted`, along with cached member records for unloaded NPCs that NpcScript has already seen. `Apply(globals, members)` restores these values so programs can read them when they start again. `Player` is looked up from the scene when needed.
+
+The example below serializes the NpcScript portion of a save as JSON. Your save manager can store that string or put the two lists directly into its own save model.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using NpcScripting;
+using UnityEngine;
+
+public static class NpcScriptSaveSection
+{
+    [Serializable]
+    private sealed class Data
+    {
+        public List<NpcScriptVariablePersistence.SavedVariable> globals;
+        public List<NpcScriptVariablePersistence.SavedMember> members;
+    }
+
+    public static string CaptureJson()
+    {
+        var data = new Data
+        {
+            globals = NpcScriptVariablePersistence.CaptureGlobals(),
+            members = NpcScriptVariablePersistence.CaptureMembers()
+        };
+        return JsonUtility.ToJson(data);
+    }
+
+    public static void ApplyJson(string json)
+    {
+        if (string.IsNullOrWhiteSpace(json))
+            return;
+
+        var data = JsonUtility.FromJson<Data>(json);
+        if (data != null)
+            NpcScriptVariablePersistence.Apply(data.globals, data.members);
+    }
+}
+```
+
+**Save at a checkpoint.** Call `CaptureJson()` after your game has set the variables that mark the checkpoint. Store the result with the rest of your save data, such as the scene and player position.
+
+**Restore before starting programs.** For a fresh game or when switching save slots, call `NpcScriptVariablePersistence.ClearForNewSession()` before the destination scene's runners initialize. Turn off **Run On Start** for runners your save manager starts. Load the scene, recreate any referenced objects and load any referenced assets, then call `ApplyJson()` on Unity's main thread. Start the relevant runners with `Run()` once the restore is complete. Member records for other scenes are applied when a matching runner initializes later.
+
+**Save progress in globals or members.** Local variables, invocation parameters, the instruction pointer, the call stack, pending prompts, and in-flight actions are transient. Store durable progress such as `Global.QuestStage = 3` or `Member.HasGreeted = true` in a global or member. After loading, start the program from the beginning and branch on those values. Save the actual world state, such as whether a door is open or where an NPC is standing, in your game's save system.
+
+The persistence helper supports `null`, booleans, `int`, `float`, `double`, strings, enums, and Unity object references. Unsupported values such as vectors and custom objects are skipped with a warning. Store those values in your own save format or break them into supported fields. Member IDs and scene references depend on scene paths, hierarchy names, and the order of same-named siblings. Asset references resolve by type and name among loaded objects. Use stable game IDs in your own save model when objects are dynamically spawned or renamed. An unresolved Unity reference is restored as `null` and logged.

@@ -19,7 +19,7 @@ description: "Saved member and object references use scene hierarchy paths. Rena
 | `DialogueText`, `PromptText`, `PromptChoices`, `SubmitResponse(int)` | Integrate a custom dialogue UI. |
 | `NpcScriptProgram.Instructions`, `EnsureInstructionIds()` | Author assets programmatically and ensure stable row IDs before execution. Preserve IDs when editing existing rows. |
 | `NpcScriptFunctionAttribute` | Expose a public instance method. Configure command, condition, expression and waiting eligibility. |
-| `NpcScriptVariablePersistence.CaptureGlobals()`, `CaptureMembers()`, `Apply(globals, members)` | Serialize save DTOs with your own system. Use `ClearForNewSession()` to clear the shared session state explicitly. |
+| `NpcScriptVariablePersistence.CaptureGlobals()`, `CaptureMembers()`, `Apply(globals, members)` | Capture and restore shared globals and per-runner member variables. See [Save and load NpcScript state]({{ '/user-guide/' | relative_url }}#save-and-load-npcscript-state) for a JSON example and restore order. |
 | `NpcScriptLocalizationFileBuilder.Build(program, language)`, `Localization.CurrentLanguageCode`, `Localizer.BuildVoiceLines(program)` | Export text, select a language and get voice filenames. |
 
 Saved member and object references use scene hierarchy paths. Rename or reparent referenced objects with care across save versions. Local variables and the instruction pointer are transient. Programs are project-authored executable data. The expression language can access public instance component members, so keep untrusted input out of executable expressions.
