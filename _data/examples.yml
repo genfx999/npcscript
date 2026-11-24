@@ -4,10 +4,7 @@
   features: [Dialogue choices, Branching, Gate action]
   url: /dialogue/
 - title: Actions and Sequencing
-  play_image: /assets/examples/actions-sequencing-play.png
-  play_alt: Unity Game view showing the technician with the raised station beacon
-  program_image: /assets/examples/actions-sequencing-program.png
-  program: Signal Station Sequence
+  youtube_id: "5CxmtOAwWS4"
   text: Walk a technician to a station, play an animation and a sound, then reveal and raise a beacon.
   features: [Navigation, Animation, Audio, Props]
   url: /instruction-reference/
