@@ -65,6 +65,22 @@ Returns the current NPC's GameObject name as text.
 
 Returns whether the NpcScript component is enabled and its GameObject is active in the scene hierarchy.
 
+### SetProgram
+
+**Parameters** — `target` (Transform with an enabled NpcScript component on the same active GameObject), `programAsset` (NpcScriptProgram asset).
+
+Stops the target's current program immediately and starts the replacement from its first row on the next frame. Clears the target's local and member variables, invocation stack, selected target, and pending dialogue. Shared globals keep their values.
+
+In Play Mode, use **Call → NPC State → SetProgram**. For example, after selecting the receiver of an attack, choose **Target Transform** and assign `NpcDeath`. The attacking program continues immediately. Choose **this** to replace the calling NPC's own program and end its current run.
+
+### Interrupt
+
+**Parameters** — `target` (Transform with an enabled NpcScript component on the same active GameObject), `programAsset` (NpcScriptProgram asset without Parameter rows).
+
+Temporarily runs the supplied program on the target in Play Mode. When it finishes, the target resumes the original program with its locals, parameters, and member variables available. An unfinished action can restart at its current row. **Sleep** resumes with its remaining time.
+
+Use **Call → NPC State → Interrupt** for a reaction such as a hit animation during a patrol. When the target is another NPC, the calling program continues immediately. Choose **this** to resume at the row after the **Interrupt** call when the reaction finishes.
+
 ### Select nearest target
 
 **Parameters** — `maximumRange` (number in world units, default `100`).
