@@ -11,7 +11,7 @@ description: "Saved member and object references use scene hierarchy paths. Rena
 | --- | --- |
 | `NpcScripting.NpcScript.Program` | Assign the program to a scene runner. |
 | `Run()`, `Restart()`, `Stop()` | Start, restart or stop execution. `Run` returns whether startup succeeded. |
-| `Step()`, `Tick(instructionBudget)` | Advance manually for tools and tests. Enabled runners already tick themselves. |
+| `Step()`, `Tick(instructionBudget)` | Advance manually for tools and tests. Ordinary `Step()` attempts one instruction and can leave a wait unfinished. Use the Program Editor's **Step Over** to step by completed instructions. Enabled runners already tick themselves. |
 | `RunProgramAsInterruption(program)` | Run a parameterless interruption program on this runner. Its invocation frame allows the prior program to resume. |
 | `ActiveProgram`, `CurrentInstructionIndex`, `InvocationDepth`, `CurrentActivityDisplayName` | Inspect live state. Instruction indexes are zero-based. |
 | `IsRunning`, `IsPaused`, `HasCompleted`, `LastError` | Inspect execution and failures. |

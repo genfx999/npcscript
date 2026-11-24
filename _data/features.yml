@@ -25,6 +25,6 @@
   link: Write a custom command
 - icon: "▷"
   title: Runtime Debugging
-  text: Validate programs before running them. Run, stop, restart, and step through a script with live instruction highlighting.
+  text: Set persistent breakpoints, step through instructions, and inspect each paused NPC's variables while the rest of the scene keeps running.
   url: /runtime-debugging/
   link: Learn to debug a program
