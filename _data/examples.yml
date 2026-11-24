@@ -14,10 +14,7 @@
   features: [Tracking, Dolly, Zoom, Camera release]
   url: /cutscenes/
 - title: Custom C# Integration
-  play_image: /assets/examples/custom-csharp-play.png
-  play_alt: Unity Game view showing the raised gate and the confirmation from the custom command
-  program_image: /assets/examples/custom-csharp-program.png
-  program: Custom Gate Commands
+  youtube_id: "wZZUol6qQp8"
   text: Use a custom permit getter and a command that waits for the gate to finish opening.
   features: [Attributed methods, Conditions, Waiting]
   url: /custom-commands/
