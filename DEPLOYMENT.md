@@ -20,4 +20,4 @@ The browser checks used Edge with emulated viewport sizes. Separate physical-dev
 
 The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. Set `youtube_id` in `_data/examples.yml` to embed a YouTube video in an example, or use `video_url` for a video link alongside the screenshots.
 
-The hero and showcase use a genuine Unity Program Editor capture. Interactive Dialogue and Actions and Sequencing embed 1440p YouTube demos. The other four examples pair a Play Mode Game view with the corresponding program and link to the full-size captures.
+The hero and showcase use a genuine Unity Program Editor capture. Interactive Dialogue, Actions and Sequencing, and Cutscene Direction embed 1440p YouTube demos. The other three examples pair a Play Mode Game view with the corresponding program and link to the full-size captures.

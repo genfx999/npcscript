@@ -9,10 +9,7 @@
   features: [Navigation, Animation, Audio, Props]
   url: /instruction-reference/
 - title: Cutscene Direction
-  play_image: /assets/examples/cutscene-direction-play.png
-  play_alt: Unity Game view showing the scout during the overlook camera shot
-  program_image: /assets/examples/cutscene-direction-program.png
-  program: Overlook Cutscene
+  youtube_id: "Do86yhYM0MY"
   text: Follow a scout to an overlook with a scripted camera move, dialogue, and a return to the player camera.
   features: [Tracking, Dolly, Zoom, Camera release]
   url: /cutscenes/
