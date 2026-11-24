@@ -18,6 +18,6 @@ The browser checks used Edge with emulated viewport sizes. Separate physical-dev
 
 ## Publisher settings
 
-The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. Set `youtube_id` in `_data/examples.yml` to embed a YouTube video in an example, or use `video_url` for a video link alongside the screenshots.
+The Asset Store state is **Coming Soon**. Add the real listing, video and support details to `_config.yml` when available. In `_data/examples.yml`, set `video_file` and `video_poster` for a local MP4 and its preview image, `youtube_id` for a YouTube embed, or `video_url` for a video link.
 
-The hero and showcase use a genuine Unity Program Editor capture. All six examples embed 1440p YouTube demos.
+The hero and showcase use current Unity Program Editor captures. All six example videos include current editor close-ups and play directly from GitHub Pages in 1440p.

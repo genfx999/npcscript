@@ -25,7 +25,7 @@ home: true
       {% endif %}
     </div>
     <div class="editor-shot hero-shot">
-      <img src="{{ '/assets/npcscript-hero.png' | relative_url }}" width="1536" height="1024" fetchpriority="high" alt="NpcScript visual scripting toolkit for Unity, featuring branching dialogue, cinematic actions and cutscenes, conditions, variables, loops, and custom C# commands beside a preview of the Program Editor">
+      <img src="{{ '/assets/harbor-program-editor.png' | relative_url }}" width="1400" height="876" fetchpriority="high" alt="The current NpcScript Program Editor showing the Harbor Conversation, with two prompt choices, colored If blocks, and a call to open the gate">
     </div>
   </div>
 </section>
@@ -61,8 +61,8 @@ home: true
     <h2 id="editor-title">Powerful Scripting. No Sprawling Node Graphs.</h2>
     <p class="section-intro">Write an NPC program as a structured list of instructions. Edit a condition or dialogue choice in place, fold its nested block, and see which row is active in Play Mode.</p>
     <figure class="editor-shot showcase-shot">
-      <a href="{{ '/assets/program-editor.png' | relative_url }}" aria-label="View the full-size Program Editor screenshot">
-        <img src="{{ '/assets/program-editor.png' | relative_url }}" width="1400" height="900" loading="lazy" alt="The Beacon Dialogue program with a validation message, two prompt responses, nested If and Else instructions, and foldout controls">
+      <a href="{{ '/assets/program-editor.png' | relative_url }}?v={{ site.github.build_revision }}" aria-label="View the full-size Program Editor screenshot">
+        <img src="{{ '/assets/program-editor.png' | relative_url }}?v={{ site.github.build_revision }}" width="1400" height="766" loading="lazy" alt="The Beacon Dialogue program with two prompt responses, color-coded If and Else instructions, function calls, and foldout controls">
       </a>
       <figcaption>Beacon Dialogue shows validation, prompt choices, and nested If and Else rows. Select the image to view it at full size.</figcaption>
     </figure>
@@ -91,7 +91,14 @@ home: true
             {% endif %}
           </div>
         </div>
-        {% if example.youtube_id %}
+        {% if example.video_file %}
+        <div class="demo-video">
+          <video width="2560" height="1440" controls playsinline preload="none" aria-label="{{ example.title | escape }} demo video" poster="{{ example.video_poster | relative_url }}">
+            <source src="{{ example.video_file | relative_url }}" type="video/mp4">
+            <a href="{{ example.video_file | relative_url }}">Download the {{ example.title | escape }} video</a>
+          </video>
+        </div>
+        {% elsif example.youtube_id %}
         <div class="demo-video">
           <iframe src="https://www.youtube-nocookie.com/embed/{{ example.youtube_id | escape }}" title="{{ example.title | escape }} demo video" width="960" height="540" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
         </div>

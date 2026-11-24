@@ -1,30 +1,36 @@
 - title: Interactive Dialogue
-  youtube_id: "92F9KswOZII"
+  video_file: /assets/videos/interactive-dialogue-1440p.mp4
+  video_poster: /assets/videos/interactive-dialogue.jpg
   text: Ask a visitor for a permit, then open or keep the harbor gate closed based on their answer.
   features: [Dialogue choices, Branching, Gate action]
   url: /dialogue/
 - title: Actions and Sequencing
-  youtube_id: "5CxmtOAwWS4"
+  video_file: /assets/videos/actions-and-sequencing-1440p.mp4
+  video_poster: /assets/videos/actions-and-sequencing.jpg
   text: Walk a technician to a station, play an animation and a sound, then reveal and raise a beacon.
   features: [Navigation, Animation, Audio, Props]
   url: /instruction-reference/
 - title: Cutscene Direction
-  youtube_id: "Do86yhYM0MY"
+  video_file: /assets/videos/cutscene-direction-1440p.mp4
+  video_poster: /assets/videos/cutscene-direction.jpg
   text: Follow a scout to an overlook with a scripted camera move, dialogue, and a return to the player camera.
   features: [Tracking, Dolly, Zoom, Camera release]
   url: /cutscenes/
 - title: Custom C# Integration
-  youtube_id: "wZZUol6qQp8"
+  video_file: /assets/videos/custom-csharp-integration-1440p.mp4
+  video_poster: /assets/videos/custom-csharp-integration.jpg
   text: Use a custom permit getter and a command that waits for the gate to finish opening.
   features: [Attributed methods, Conditions, Waiting]
   url: /custom-commands/
 - title: Advanced Scripting
-  youtube_id: "BemrL3NJApw"
+  video_file: /assets/videos/advanced-scripting-1440p.mp4
+  video_poster: /assets/videos/advanced-scripting.jpg
   text: Calibrate three stations in a loop while a reusable child program updates the caller's counter.
   features: [Loops, Expressions, In/out parameters]
   url: /user-guide/
 - title: Beacon Demo
-  youtube_id: "stbwSlNlTzE"
+  video_file: /assets/videos/beacon-demo-1440p.mp4
+  video_poster: /assets/videos/beacon-demo.jpg
   text: Choose whether to raise the beacon. Both branches invoke a shared reply program.
   features: [Prompt, Prop tween, Program call]
   url: /user-guide/
